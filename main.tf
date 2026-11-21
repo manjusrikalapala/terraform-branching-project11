@@ -7,3 +7,10 @@ resource "null_resource" "baseline_infrastructure" {
     environment = "development"
   }
 }
+
+resource "null_resource" "security_component" {
+  triggers = {
+    control = "security"
+    version = "1.0"
+  }
+}
